@@ -11,6 +11,9 @@ import 'firebase_central.dart';
 
 class MyApp extends StatelessWidget {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+
+  MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             print("error ${snapshot.error}");
-            return Wrong();
+            return const Wrong();
           }
           if (snapshot.connectionState == ConnectionState.done) {
             Get.put(FirestoreController());
@@ -40,7 +43,7 @@ class MyApp extends StatelessWidget {
               manager.changeTheme(isDarkMode: isDarkMode);
             });
             initializeTheme();
-            return FirebaseCentral();
+            return const FirebaseCentral();
           }
 
           return const Loading();
@@ -51,6 +54,8 @@ class MyApp extends StatelessWidget {
 }
 
 class Wrong extends StatelessWidget {
+  const Wrong({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return const Center(child: Text("Something went wrong"));

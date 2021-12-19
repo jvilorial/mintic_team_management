@@ -8,6 +8,8 @@ import 'package:misiontic_team_management/ui/widgets/group_widget.dart';
 import 'package:misiontic_team_management/ui/widgets/sesion_widget.dart';
 
 class ContentPage extends StatefulWidget {
+  const ContentPage({Key? key}) : super(key: key);
+
   @override
   _ContentPageState createState() => _ContentPageState();
 }

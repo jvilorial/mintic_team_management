@@ -1,16 +1,26 @@
-Proyecto Nivelación MisionTic 
+# Mision MinTIC 2021 
 
-Usar el template para crear un repositorio propio, completar el proyecto y verificar que las pruebas de widget e integración funcione
+##  Aplicación Team Management!  🤓 
 
-Para la prueba de integración se asume que hay un usuario creado a@a.com con clave 123456
+Proyecto creado para el ciclo 4B, modulo de aplicaciones moviles creadas con **flutter**.
 
-Recordar que la prueba de integración se corre con:   
+### Descripción.
 
-flutter drive --driver test_driver/integration_test.dart --target integration_test/app_test.dart
+Se coloca en practica los conocimientos adquiridos durante el curso.
+- Autenticación
+- Base de datos
+- Widgets
+- Test
+- Dart
+- Geolocalización
 
-Este proyecto trabaja las funcionalidades de Firestore y autenticación de Firebase, hay que agregar el google-services.json y habilitar esos servicios en el firebase console. Ver: https://drive.google.com/file/d/1qPSQkVIiUy6Iv9OfwAC_dTRLvEDPz4pp/view?usp=sharing   
+### Link video de aplicación (DEMO).
 
-Pista: Revisar los comentarios TODO   
+click [Aqui.](https://drive.google.com/file/d/1ELocx3yLe0qk4U_lkpTdxdlWYGZ9fDJa/view?usp=sharing "Aqui").
+
+### Link video de aplicacion (TEST).
+click [Aqui.](https://drive.google.com/file/d/1xzlfs3AAFuctsGWvRVij6Thk9MCR3fgX/view?usp=sharing "Aqui.")
 
 
-<img src="firebase.gif" width="300" />
+### Agradecimientos.
+A todos los profesores que colocaron sus conocimientos a nuestro alcance con la mejor disposición.
