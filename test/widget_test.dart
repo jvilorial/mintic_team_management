@@ -21,7 +21,7 @@ class MockFirestoreController extends GetxService
   List<Sesion> get sesions => _sesions;
 
   @override
-  addGoup(groupId, student1, student2) {
+  addGroup(groupId, student1, student2) {
     _groups.add(Group(groupId, student1, student2, null));
   }
 

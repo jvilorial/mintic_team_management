@@ -5,6 +5,8 @@ import 'package:misiontic_team_management/domain/controller/authentication_contr
 import 'firebase_signup.dart';
 
 class FirebaseLogIn extends StatefulWidget {
+  const FirebaseLogIn({Key? key}) : super(key: key);
+
   @override
   _FirebaseLogInState createState() => _FirebaseLogInState();
 }
@@ -18,6 +20,7 @@ class _FirebaseLogInState extends State<FirebaseLogIn> {
   _login(theEmail, thePassword) async {
     print('_login $theEmail $thePassword');
     try {
+      await authenticationController.login(theEmail, thePassword);
       // TODO
       logInfo(
           'Aquí llamar al método login del authenticationController con await');
@@ -25,7 +28,7 @@ class _FirebaseLogInState extends State<FirebaseLogIn> {
       Get.snackbar(
         "Login",
         err.toString(),
-        icon: Icon(Icons.person, color: Colors.red),
+        icon: const Icon(Icons.person, color: Colors.red),
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -34,7 +37,7 @@ class _FirebaseLogInState extends State<FirebaseLogIn> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -101,6 +104,7 @@ class _FirebaseLogInState extends State<FirebaseLogIn> {
           ),
           TextButton(
               onPressed: () {
+                Get.to(FirebaseSignUp());
                 // TODO
                 logInfo('Aquí navegar a  FirebaseSignUp');
               },

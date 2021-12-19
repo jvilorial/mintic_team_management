@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:misiontic_team_management/domain/controller/authentication_controller.dart';
 
 class FirebaseSignUp extends StatefulWidget {
+  const FirebaseSignUp({Key? key}) : super(key: key);
+
   @override
   _FirebaseSignUpState createState() => _FirebaseSignUpState();
 }
@@ -59,7 +61,7 @@ class _FirebaseSignUpState extends State<FirebaseSignUp> {
                           keyboardType: TextInputType.emailAddress,
                           controller: this.controllerEmail,
                           decoration:
-                              InputDecoration(labelText: "Email address"),
+                              const InputDecoration(labelText: "Email address"),
                           validator: (value) {
                             if (value!.isEmpty) {
                               return "Enter email";
@@ -72,8 +74,8 @@ class _FirebaseSignUpState extends State<FirebaseSignUp> {
                           height: 20,
                         ),
                         TextFormField(
-                          controller: this.controllerPassword,
-                          decoration: InputDecoration(labelText: "Password"),
+                          controller: controllerPassword,
+                          decoration: const InputDecoration(labelText: "Password"),
                           keyboardType: TextInputType.number,
                           obscureText: true,
                           validator: (value) {

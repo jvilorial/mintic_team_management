@@ -12,18 +12,20 @@ class SesionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: const Center(
-          // TODO
-          child: Text(
-              'Aquí colocar la lista de sesiones, recordar que se se debe escuchar el controlador (sesions) con obx'),
+        body: Center(
+          child: 
+            Obx( () => ListView.builder(
+              scrollDirection: Axis.vertical,
+              itemCount: firebaseController.sesions.length,
+              itemBuilder: (context, index) => _buildItem(context, firebaseController.sesions[index]))),
         ),
         floatingActionButton: FloatingActionButton(
           key: const ValueKey("addSesionAction"),
           child: const Icon(Icons.add),
           onPressed: () {
             if (firebaseController.groupIds().isNotEmpty) {
-              // TODO
-              logInfo('Aquí navegar a  AddSesionPage');
+              Get.to(const AddSesionPage());
+              //logInfo('Aquí navegar a  AddSesionPage');
             } else {
               Get.snackbar("Aun no has creado ningun grupo",
                   "Crea un grupo para continuar...");
